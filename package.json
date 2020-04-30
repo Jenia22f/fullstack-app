@@ -4,7 +4,7 @@
   "description": "Fullstack upp with angular + nodejs + express",
   "main": "index.js",
   "engines": {
-    "node": "13.9.0",
+    "node": "12.11.1",
     "npm": "6.13.7"
   },
   "scripts": {
