@@ -11,8 +11,8 @@ const positionRoutes = require('./routes/position');
 const keys = require('./config/keys');
 const app = express();
 
-mongoose.connect(keys.mongoURI, {useUnifiedTopology: true})
-    .then(()=> console.log('MongoDB connected'))
+mongoose.connect(keys.mongoURI)
+    .then(() => console.log('MongoDB connected.'))
     .catch(error => console.log(error));
 
 app.use(passport.initialize());
@@ -42,4 +42,5 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-module.exports = app;
+
+module.exports =;
