@@ -1,0 +1,12 @@
+.country-title {
+  text-align: center;
+}
+
+.collection {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.collection-item span {
+  float: right;
+}

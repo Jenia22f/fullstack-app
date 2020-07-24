@@ -14,6 +14,7 @@ import {CategoriesFormComponent} from "./categories-page/categories-form/categor
 import {OrderCategoriesComponent} from "./order-page/order-categories/order-categories.component";
 import {OrderPositionsComponent} from "./order-page/order-positions/order-positions.component";
 import {CovidPageComponent} from "./covid-page/covid-page.component";
+import {CountryDetailsPageComponent} from "./covid-page/country-details-page/country-details-page.component";
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
       {path: 'categories/new', component: CategoriesFormComponent},
       {path: 'categories/:id', component: CategoriesFormComponent},
       {path: 'covid', component: CovidPageComponent},
+      {path: 'covid/:country', component: CountryDetailsPageComponent},
     ]
   },
 ];

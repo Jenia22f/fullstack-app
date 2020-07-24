@@ -24,6 +24,7 @@ import {OrderPositionsComponent} from './order-page/order-positions/order-positi
 import { HistoryListComponent } from './history-page/history-list/history-list.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
 import { CovidPageComponent } from './covid-page/covid-page.component';
+import {CountryDetailsPageComponent} from "./covid-page/country-details-page/country-details-page.component";
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { CovidPageComponent } from './covid-page/covid-page.component';
     HistoryListComponent,
     HistoryFilterComponent,
     CovidPageComponent,
+    CountryDetailsPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,18 @@
-<p>country-details-page works!</p>
+<div class="row" *ngIf="countryLiveData$ | async as countryLiveData ; else loader">
+  <div class="col s12">
+    <h3 class="country-title">Covid19 status in {{countryName}} for July!</h3>
+    <div class="collection" *ngIf="countryLiveData; else empty">
+      <p class="collection-item">Total Confirmed: <span>{{confirmed}}</span></p>
+      <p class="collection-item">Total Recovered: <span>{{recovered}}</span></p>
+      <p class="collection-item">Total Deaths: <span>{{deaths}}</span></p>
+    </div>
+    <ng-template #empty>
+      <div class="center">
+        Something went wrong :( !
+      </div>
+    </ng-template>
+  </div>
+</div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

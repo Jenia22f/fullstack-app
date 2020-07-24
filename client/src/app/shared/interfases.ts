@@ -67,7 +67,7 @@ export interface AnalyticsChartItem {
   label: string
 }
 
-export interface Country {
+export interface Countries {
   Country: string,
   Slug: string,
   ISO2: string
@@ -80,4 +80,19 @@ export interface Total {
   TotalDeaths: Number,
   NewRecovered: Number,
   TotalRecovered: Number
+}
+
+export interface CountryLiveData {
+  Active: Number
+  City: string
+  CityCode: string
+  Confirmed: Number
+  Country: string
+  CountryCode: string
+  Date: Date
+  Deaths: Number
+  Lat: string
+  Lon: string
+  Province: string
+  Recovered: Number
 }
