@@ -16,6 +16,7 @@ export class OrderCategoriesComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.covid$)
     this.categories$ = this.categoriesService.fetch();
   }
 

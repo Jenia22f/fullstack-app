@@ -45,4 +45,8 @@ export class CategoriesService {
     return this.http.delete<Message>(`/api/category/${id}`)
   }
 
+  getCovid(): Observable<any> {
+    return this.http.get('https://api.covid19api.com/country/south-africa/status/confirmed/live?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z')
+  }
+
 }

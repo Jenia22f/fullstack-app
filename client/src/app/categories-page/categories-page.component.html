@@ -23,6 +23,28 @@
       </ng-template>
     </div>
   </div>
+  <div class="row" *ngIf="covid$ | async as covid; else loader">
+    <div class="col s12">
+      <div class="collection" *ngIf="covid.length !== 0; else empty">
+        <div
+          *ngFor="let cov of covid"
+          class="collection-item">
+          <p>{{cov.Country}}</p>
+          <p>{{cov.CountryCode}}</p>
+          <p>{{cov.Lat}}</p>
+          <p>{{cov.Lon}}</p>
+          <p>{{cov.Cases}}</p>
+          <p>{{cov.Status}}</p>
+          <p>{{cov.Date}}</p>
+        </div>
+      </div>
+      <ng-template #empty>
+        <div class="center">
+          You dont have any cov!
+        </div>
+      </ng-template>
+    </div>
+  </div>
 
   <ng-template #loader>
     <app-loader></app-loader>
