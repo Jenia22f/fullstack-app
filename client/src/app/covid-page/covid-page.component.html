@@ -8,9 +8,8 @@
     <div class="countries" *ngIf="countries.length !== 0; else empty">
       <div
         *ngFor="let country of countries"
-        class="countries-item">
+        class="countries-item" [routerLink]="['/covid', country.Slug]">
         <a
-          [routerLink]="['/covid', country.Slug]"
           style="color: black">{{country.Country}}</a>
       </div>
     </div>
