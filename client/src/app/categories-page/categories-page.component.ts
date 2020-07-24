@@ -11,14 +11,12 @@ import {Observable} from "rxjs";
 export class CategoriesPageComponent implements OnInit {
 
   categories$: Observable<Category[]>;
-  covid$: Observable<any>;
 
   constructor(private categoriesService: CategoriesService) {
   }
 
   ngOnInit() {
    this.categories$ = this.categoriesService.fetch()
-   this.covid$ = this.categoriesService.getCovid()
 
   }
 

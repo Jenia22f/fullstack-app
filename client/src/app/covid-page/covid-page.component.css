@@ -1,0 +1,22 @@
+.total {
+  display: flex;
+  margin-top: 50px;
+}
+
+.total h5 {
+  margin: 0 auto;
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 30px;
+}
+
+.countries-item {
+  border: 1px solid #c2c0c2;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  padding: 10px;
+}

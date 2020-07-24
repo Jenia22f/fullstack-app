@@ -66,3 +66,18 @@ export interface AnalyticsChartItem {
   order: number,
   label: string
 }
+
+export interface Country {
+  Country: string,
+  Slug: string,
+  ISO2: string
+}
+
+export interface Total {
+  NewConfirmed: Number,
+  TotalConfirmed: Number,
+  NewDeaths: Number,
+  TotalDeaths: Number,
+  NewRecovered: Number,
+  TotalRecovered: Number
+}

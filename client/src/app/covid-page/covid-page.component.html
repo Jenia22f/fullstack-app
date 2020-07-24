@@ -1,1 +1,28 @@
-<p>covid-page works!</p>
+<div class="total" *ngIf="total; else loader">
+    <h5>Total cases:  {{total.TotalConfirmed}}</h5>
+    <h5>Total deaths: {{total.TotalDeaths}}</h5>
+    <h5>Total recovered: {{total.TotalRecovered}}</h5>
+  </div>
+<div class="row" *ngIf="country$ | async as countries; else loader">
+  <div class="row s12">
+    <div class="countries" *ngIf="countries.length !== 0; else empty">
+      <div
+        *ngFor="let country of countries"
+        class="countries-item">
+        <a
+          [routerLink]="['/covid', country.slug]"
+          style="color: black">{{country.Country}}</a>
+      </div>
+    </div>
+
+    <ng-template #empty>
+      <div class="center">
+        You dont have any cov!
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

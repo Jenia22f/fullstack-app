@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from "rxjs";
+import {CovidService} from "../shared/services/covid.service";
+import {Total} from "../shared/interfases";
 
 @Component({
   selector: 'app-covid-page',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CovidPageComponent implements OnInit {
 
-  constructor() { }
+  total$: Observable<any>;
+  country$: Observable<Object>;
+  total:Total;
+
+
+  constructor(private covidService: CovidService) { }
 
   ngOnInit() {
+    this.total$ = this.covidService.getTotalInfo();
+    this.country$ = this.covidService.getCountry();
+
+    this.total$.subscribe(item => this.total = item.Global)
   }
+
 
 }
